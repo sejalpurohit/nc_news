@@ -1,7 +1,8 @@
-import { useCommentOnArticle } from "../hooks/useGetCommentsbyArticleId";
-import { usePostComment } from "../hooks/usePostComment";
+import { useCommentOnArticle } from "../../../hooks/useGetCommentsbyArticleId";
+import { usePostComment } from "../../../hooks/usePostComment";
 import { useState } from "react";
-import { useDeleteComment } from "../hooks/useDeleteComment";
+import { useDeleteComment } from "../../../hooks/useDeleteComment";
+import "./ArticleComments.css";
 
 function ArticleComments({ id, onCommentAdded, onCommentDeleted }) {
 	const { comment, loadingComments, errorComment, setComments } =
@@ -76,10 +77,7 @@ function ArticleComments({ id, onCommentAdded, onCommentDeleted }) {
 		<div className="comments-section">
 			<h3>Comments</h3>
 
-			<form
-				onSubmit={handleSubmit}
-				className="comment-form"
-			>
+			<form onSubmit={handleSubmit}>
 				<textarea
 					value={text}
 					onChange={(e) => setText(e.target.value)}
@@ -92,24 +90,29 @@ function ArticleComments({ id, onCommentAdded, onCommentDeleted }) {
 				</button>
 			</form>
 
-			{errorPostComment && <p style={{ color: "red" }}>{errorComment}</p>}
+			{errorPostComment && (
+				<p
+					className="error-message"
+					style={{ color: "red" }}
+				>
+					{errorComment}
+				</p>
+			)}
 
 			{comment.map((eachComment) => (
 				<div
 					key={eachComment.comment_id}
-					className="comment"
+					className="comment-box"
 				>
 					<h5>{eachComment.body}</h5>
 					<h6>👍 {eachComment.votes}👎</h6>
 					<h6>{eachComment.created_at}</h6>
 					<h6>{eachComment.author}</h6>
 
-					{/* {eachComment.author === loggedInUser && ( */}
 					<button
 						onClick={() => handleDelete(eachComment.comment_id)}
 						className="delete-btn"
 					>
-						{/* {loadingId === eachComment.comment_id ? "Deleting..." : "Delete"} */}
 						delete
 					</button>
 				</div>

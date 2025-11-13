@@ -12,7 +12,6 @@ export const useTopics = () => {
 				const data = await getTopics();
 				setTopics(data.topics);
 			} catch (err) {
-				console.error("Error fetching topics:", err);
 				setError(err);
 				setTopics([]);
 			} finally {

@@ -1,9 +1,8 @@
 function SearchBar() {
 	return (
-		<div className="search-bar-wrapper">
+		<div className="search-bar">
 			<input
 				type="text"
-				className="search-bar"
 				placeholder="Search articles..."
 			/>
 		</div>

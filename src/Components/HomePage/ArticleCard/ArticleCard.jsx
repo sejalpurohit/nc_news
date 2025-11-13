@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./ArticleCard.css";
 
 function ArticleCard({ article }) {
 	if (!article) return;
@@ -14,23 +15,23 @@ function ArticleCard({ article }) {
 	} = article;
 
 	return (
-		<section className="card">
+		<section className="article-card">
 			<img
-				className="card-image"
+				className="article-card-img"
 				src={article_img_url}
 				alt="image"
 			/>
-			<div className="card-content">
+			<div className="article-card-body">
 				<Link
-					className="card-title"
+					className="article-card-title"
 					to={`/articles/${article_id}`}
 				>
 					{title}
 				</Link>
-				<h4 className="card-description ">{topic}</h4>
-				<h4 className="card-title"> {author}</h4>
+				<h4 className="article-card-topic">{topic}</h4>
+				<h4 className="article-card-author"> {author}</h4>
 			</div>
-			<div className="stats-row">
+			<div className="article-card-stats">
 				<h5>💬Comment: {comment_count}</h5>
 				<h5>👍Votes: {votes}</h5>
 			</div>

@@ -1,5 +1,4 @@
 export function updateArticleVotes(articleId, inc) {
-	console.log("in api ..", articleId, inc);
 	return fetch(
 		`https://news-server-u1gw.onrender.com/api/articles/${articleId}`,
 		{

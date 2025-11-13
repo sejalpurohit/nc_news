@@ -1,5 +1,5 @@
 function Footer() {
-	return <footer className="footer">Footer</footer>;
+	return <footer className="footer">Developed by Sejal Purohit</footer>;
 }
 
 export default Footer;

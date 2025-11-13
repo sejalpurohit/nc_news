@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import { useArticle } from "../../hooks/useArticlebyId.js";
-import ArticleComments from "../ArticleComments.jsx";
-import { useUpdateArticleVotes } from "../../hooks/useUpdateVote.js";
+import { useArticle } from "../../../hooks/useArticlebyId.js";
+import ArticleComments from "../ArticleComments/ArticleComments.jsx";
+import { useUpdateArticleVotes } from "../../../hooks/useUpdateVote.js";
+import "./ArticlePage.css";
 
 function ArticlePage() {
 	const { id } = useParams();
@@ -37,20 +38,20 @@ function ArticlePage() {
 	return (
 		<div className="article-page">
 			<h1>{article.title}</h1>
-
+			<h3 className="article-topic"> {article.topic}</h3>
 			<img
 				src={article.article_img_url}
 				alt={article.title}
 			/>
 			<p>{article.body}</p>
-			<h3>{article.topic}</h3>
+
 			<h4>By {article.author}</h4>
-			<div className="stats-row">
+			<div className="article-stats">
 				<h5>💬 Comment: {article.comment_count}</h5>
 				<h5>👍 Votes: {displayedVotes}</h5>
 			</div>
 
-			<div style={{ marginTop: "10px" }}>
+			<div className="vote-section">
 				<button
 					disabled={voting}
 					onClick={() => handleVote(1)}

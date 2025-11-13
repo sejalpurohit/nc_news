@@ -1,3 +1,5 @@
+import "./TopicCard.css";
+
 function TopicCard({ topic }) {
 	if (!topic) return;
 
@@ -12,10 +14,10 @@ function TopicCard({ topic }) {
 				<img
 					src={img_url}
 					alt={slug || "topic image"}
-					className="topic-img"
+					className="topic-card-img"
 				/>
 			)}
-			<div className="topic-content">
+			<div className="topic-card-body">
 				<h4>{slug}</h4>
 				<h5>{description}</h5>
 			</div>
