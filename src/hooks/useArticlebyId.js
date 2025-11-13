@@ -23,5 +23,5 @@ export const useArticle = (id) => {
 		getArticle();
 	}, [id]);
 
-	return { article, loading, error };
+	return { article, loading, error, setArticle };
 };

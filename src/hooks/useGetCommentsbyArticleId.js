@@ -24,6 +24,5 @@ export const useCommentOnArticle = (id) => {
 		getCommentsByArticle();
 	}, [id]);
 
-	console.log(" in hook comments....", comment);
-	return { comment, loadingComment, error };
+	return { comment, loadingComment, error, setComments };
 };

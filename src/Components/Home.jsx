@@ -2,7 +2,7 @@ import SearchBar from "../Components/HomePage/SeacrhBar.jsx";
 import ArticleCard from "../Components/HomePage/ArticleCard.jsx";
 import Title from "./HomePage/Title.jsx";
 
-import { useArticles } from "../hooks/getAllArticles.js";
+import { useArticles } from "../hooks/useGetAllArticles.js";
 
 function Home() {
 	const { articles, loading } = useArticles();

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function App() {
 	return (
-		<div className="app-grid">
+		<div>
 			<Header />
 
 			{/* <aside
@@ -31,7 +31,7 @@ function App() {
 			</aside> */}
 			<Routes>
 				<Route
-					path="/api/articles"
+					path="/articles"
 					element={<Home />}
 				/>
 				<Route
@@ -39,7 +39,7 @@ function App() {
 					element={<ArticlePage />}
 				/>
 				<Route
-					path="/api/topics"
+					path="/topics"
 					element={<TopicsPage />}
 				/>
 			</Routes>

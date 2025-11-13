@@ -1,5 +1,5 @@
 import TopicCard from "../Components/TopicCard";
-import { useTopics } from "../hooks/getAllTopics";
+import { useTopics } from "../hooks/useGetAllTopics";
 
 export default function TopicsPage() {
 	const { topics, loadingTopics } = useTopics();

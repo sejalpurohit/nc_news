@@ -23,7 +23,7 @@ function ArticleCard({ article }) {
 			<div className="card-content">
 				<Link
 					className="card-title"
-					to={`/articles/${article_id}`} // navigate to article page
+					to={`/articles/${article_id}`}
 				>
 					{title}
 				</Link>

@@ -23,5 +23,5 @@ export const useTopics = () => {
 		loadTopics();
 	}, []);
 
-	return { topics, loadingTopics, error }; // ✅ now returns all useful info
+	return { topics, loadingTopics, error };
 };
