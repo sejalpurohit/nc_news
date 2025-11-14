@@ -1,6 +1,9 @@
-export const getArticles = async () => {
+export const getArticles = async ({
+	sort_by = "created_at",
+	order = "desc",
+} = {}) => {
 	const response = await fetch(
-		"https://news-server-u1gw.onrender.com/api/articles"
+		`https://news-server-u1gw.onrender.com/api/articles?sort_by=${sort_by}&order=${order}`
 	);
 
 	if (!response.ok) {
