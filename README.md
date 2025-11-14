@@ -2,13 +2,14 @@
 
 ### Hosted App:
 
-Repo Link: https://github.com/sejalpurohit/nc_news <br>
+<br>Live Website https://69174afa3a63a062772871c7--stalwart-gumdrop-3a89d3.netlify.app/ <br>
+<br>Repo Link: https://github.com/sejalpurohit/nc_news <br>
 
 ### Backend Details
 
-Repo Link: https://github.com/sejalpurohit/news_server <br>
 <br>Live API: https://news-server-u1gw.onrender.com/ <br>
 <br>API endpoint:https://news-server-u1gw.onrender.com/api/ <br>
+<br>Repo Link: https://github.com/sejalpurohit/news_server <br>
 
 ## Getting Started
 
