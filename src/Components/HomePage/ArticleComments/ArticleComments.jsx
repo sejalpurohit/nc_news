@@ -73,6 +73,16 @@ function ArticleComments({ id, onCommentAdded, onCommentDeleted }) {
 		}
 	};
 
+	function formatDate(created_at) {
+		const newDate = new Date(created_at).toLocaleDateString("en-US", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		});
+
+		return newDate;
+	}
+
 	return (
 		<div className="comments-section">
 			<h3>Comments</h3>
@@ -105,9 +115,9 @@ function ArticleComments({ id, onCommentAdded, onCommentDeleted }) {
 					className="comment-box"
 				>
 					<h5>{eachComment.body}</h5>
-					<h6>👍 {eachComment.votes}👎</h6>
-					<h6>{eachComment.created_at}</h6>
+					<h5>👍 {eachComment.votes}</h5>
 					<h6>{eachComment.author}</h6>
+					<h6>{formatDate(eachComment.created_at)}</h6>
 
 					<button
 						onClick={() => handleDelete(eachComment.comment_id)}

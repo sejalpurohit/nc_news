@@ -20,7 +20,7 @@
 
 .comments-section textarea {
 	width: 100%;
-	min-height: 120px;
+	min-height: 100px;
 	resize: vertical;
 	padding: 12px;
 	font-size: 16px;
@@ -41,15 +41,6 @@
 	transition: 0.2s ease;
 }
 
-.comments-section button:disabled {
-	opacity: 0.5;
-	cursor: not-allowed;
-}
-
-.comments-section button:hover:not(:disabled) {
-	background: #000;
-}
-
 .error-message {
 	color: red;
 	margin-bottom: 10px;
@@ -59,22 +50,24 @@
 	padding: 15px;
 	border: 1px solid #ddd;
 	border-radius: 10px;
-	margin-bottom: 15px;
 	background: #fafafa;
 }
 
 .comment-box h5 {
 	font-size: 18px;
 	margin-bottom: 6px;
+	padding: 5px;
 }
 
 .comment-box h6 {
+	display: inline;
 	font-size: 14px;
-	color: #555;
 	margin: 2px 0;
+	padding: 5px;
 }
 
 .comment-box .delete-btn {
+	display: block;
 	margin-top: 10px;
 	padding: 6px 12px;
 	background: #e63946;

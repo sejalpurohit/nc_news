@@ -10,28 +10,28 @@
 .article-page h1 {
 	text-align: center;
 	font-size: 34px;
-	font-weight: 800;
-	color: #222;
+
 	margin-top: 15px;
 	margin-bottom: 10px;
 }
 
+.article-page h4 {
+	padding-top: 20px;
+	font-weight: normal;
+}
+
+.article-page p {
+	font-size: 20px;
+	line-height: 1.6;
+}
+
 .article-topic {
-	display: inline-block;
 	background: #eef2ff;
 	padding: 6px 16px;
 	border-radius: 20px;
-
-	color: #3b44f6;
 	font-size: 14px;
-	font-weight: 600;
-	letter-spacing: 0.5px;
 	text-transform: uppercase;
-
 	margin: 0 auto 25px auto;
-	text-align: center;
-	text-align: center;
-
 	display: block;
 	width: fit-content;
 }
@@ -40,21 +40,27 @@
 	width: 100%;
 	border-radius: 12px;
 	margin: 20px 0;
+
 	object-fit: cover;
 	max-height: 450px;
 }
 
-.article-page p {
-	font-size: 18px;
-	color: #333;
-	line-height: 1.7;
-	margin: 20px 0;
+.vote {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 10px 0;
 }
 
-.article-page h4 {
-	font-size: 18px;
-	color: #444;
-	margin-bottom: 15px;
-	text-align: right;
-	font-weight: 600;
+.vote button {
+	font-size: 20px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.comment {
+	margin-top: 5px;
+	font-size: 16px;
+	display: block;
 }

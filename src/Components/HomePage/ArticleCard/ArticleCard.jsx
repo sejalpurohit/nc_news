@@ -4,6 +4,7 @@ import "./ArticleCard.css";
 function ArticleCard({ article }) {
 	if (!article) return;
 
+	console.log("articles.... in card", article);
 	const {
 		article_id,
 		article_img_url,
@@ -12,7 +13,14 @@ function ArticleCard({ article }) {
 		topic,
 		comment_count,
 		votes,
+		created_at,
 	} = article;
+
+	const formattedDate = new Date(created_at).toLocaleDateString("en-US", {
+		year: "numeric",
+		month: "short",
+		day: "numeric",
+	});
 
 	return (
 		<section className="article-card">
@@ -35,6 +43,10 @@ function ArticleCard({ article }) {
 				<h5>💬Comment: {comment_count}</h5>
 				<h5>👍Votes: {votes}</h5>
 			</div>
+			<p className="article-date">
+				<strong>Posted on: </strong>
+				{formattedDate}
+			</p>
 		</section>
 	);
 }

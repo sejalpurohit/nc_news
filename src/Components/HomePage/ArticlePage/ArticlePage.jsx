@@ -44,32 +44,30 @@ function ArticlePage() {
 				alt={article.title}
 			/>
 			<p>{article.body}</p>
+			<h4>
+				{" "}
+				<strong>Written By:</strong> {article.author}
+			</h4>
 
-			<h4>By {article.author}</h4>
-			<div className="article-stats">
-				<h5>💬 Comment: {article.comment_count}</h5>
-				<h5>👍 Votes: {displayedVotes}</h5>
-			</div>
-
-			<div className="vote-section">
+			<div className="vote">
 				<button
 					disabled={voting}
 					onClick={() => handleVote(1)}
 				>
-					👍 Upvote
+					👍
 				</button>
-
+				<span>Votes: {displayedVotes}</span>
 				<button
 					disabled={voting}
 					onClick={() => handleVote(-1)}
 				>
-					👎 Downvote
+					👎
 				</button>
 
 				{voting && <p>Updating vote...</p>}
 				{voteError && <p style={{ color: "red" }}>Failed to update vote</p>}
 			</div>
-
+			<h5 className="comment">💬 Comment: {article.comment_count}</h5>
 			<ArticleComments
 				id={id}
 				onCommentAdded={() => {

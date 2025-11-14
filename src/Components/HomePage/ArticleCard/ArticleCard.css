@@ -28,11 +28,12 @@
 }
 
 .article-card-title {
+	display: block;
 	font-size: 18px;
 	font-weight: 700;
 	color: #1a1a1a;
 	text-decoration: none;
-	margin-bottom: 20px;
+	margin: 10px;
 }
 
 .article-card-title:hover {
@@ -40,23 +41,31 @@
 }
 
 .article-card-topic {
+	display: inline-block;
 	font-size: 14px;
-	font-weight: 600;
-	color: #4b5563;
 	text-transform: capitalize;
-	margin-bottom: 10px;
+	background: #eef2ff;
+	padding: 10px;
+	border-radius: 20px;
 }
 
 .article-card-author {
 	font-size: 14px;
-	font-weight: 500;
-	color: #6b7280;
+
+	padding: 10px;
+	color: black;
 }
 
 .article-card-stats {
 	display: flex;
 	justify-content: space-between;
 	font-size: 14px;
-	color: #444;
+	color: black;
 	margin-top: 8px;
+}
+
+.article-date {
+	font-size: 14px;
+	padding: 20px 0px 10px 10px;
+	color: black;
 }
