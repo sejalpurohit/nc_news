@@ -11,7 +11,7 @@ export default function TopicsPage() {
 
 	return (
 		<section className="topics-section">
-			<h1 className="topics-title">All Topics</h1>
+			<h1 className="topics-title">Topics</h1>
 			<div className="topics-grid">
 				{topics.map((topic) => (
 					<TopicCard

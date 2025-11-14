@@ -21,7 +21,7 @@ function ArticleCard({ article }) {
 				src={article_img_url}
 				alt="image"
 			/>
-			<div className="article-card-body">
+			<div>
 				<Link
 					className="article-card-title"
 					to={`/articles/${article_id}`}

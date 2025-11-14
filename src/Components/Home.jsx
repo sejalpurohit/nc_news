@@ -11,26 +11,27 @@ function Home() {
 
 	return (
 		<>
-			<section className="home-layout">
-				<div className="search-bar">
-					<SearchBar />
-				</div>
-
-				<Title className="title" />
-				<div className="card-container">
-					{articles.map((article) => {
-						return (
-							<ArticleCard
-								key={article.article_id}
-								article={article}
-							/>
-						);
-					})}
-				</div>
-			</section>
-			<section>
-				<TopicsPage />
-			</section>
+			<main className="content">
+				<section className="left">
+					<TopicsPage />
+				</section>
+				<section className="right">
+					<div className="search-bar">
+						<SearchBar />
+					</div>
+					<Title className="title" />
+					<div className="articles-container">
+						{articles.map((article) => {
+							return (
+								<ArticleCard
+									key={article.article_id}
+									article={article}
+								/>
+							);
+						})}
+					</div>
+				</section>
+			</main>
 		</>
 	);
 }

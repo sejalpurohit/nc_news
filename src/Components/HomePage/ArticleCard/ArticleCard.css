@@ -1,16 +1,11 @@
 .article-card {
+	width: 350px;
+	padding: 20px;
+
+	margin: 20px;
 	background: #ffffff;
 	border-radius: 12px;
-	padding: 16px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	margin-top: 8px;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	cursor: pointer;
 }
-
 .article-card:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -21,12 +16,15 @@
 	height: 160px;
 	object-fit: cover;
 	border-radius: 10px;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 10px;
 }
 
 .article-card-body {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 5px;
 }
 
 .article-card-title {
