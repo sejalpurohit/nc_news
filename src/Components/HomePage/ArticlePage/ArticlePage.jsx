@@ -4,6 +4,7 @@ import { useArticle } from "../../../hooks/useArticlebyId.js";
 import ArticleComments from "../ArticleComments/ArticleComments.jsx";
 import { useUpdateArticleVotes } from "../../../hooks/useUpdateVote.js";
 import "./ArticlePage.css";
+import Loader from "../../Loading/Loading.jsx";
 
 function ArticlePage() {
 	const { id } = useParams();
@@ -17,7 +18,7 @@ function ArticlePage() {
 
 	const [localVotes, setLocalVotes] = useState(null);
 
-	if (loading) return <p>Loading article...</p>;
+	if (loading) return <Loader />;
 	if (error) return <p>Error: {error}</p>;
 	if (!article) return <p>Article not found</p>;
 

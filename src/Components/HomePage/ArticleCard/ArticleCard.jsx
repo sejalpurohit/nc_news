@@ -4,7 +4,6 @@ import "./ArticleCard.css";
 function ArticleCard({ article }) {
 	if (!article) return;
 
-	console.log("articles.... in card", article);
 	const {
 		article_id,
 		article_img_url,

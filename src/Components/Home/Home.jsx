@@ -1,12 +1,12 @@
-import SearchBar from "./HomePage/SearchBar.jsx";
-import ArticleCard from "../Components/HomePage/ArticleCard/ArticleCard.jsx";
-import Title from "./HomePage/Title.jsx";
-import TopicsPage from "./TpoicPage/TopicsPage.jsx";
-import SortControls from "./HomePage/Sort/Sort.jsx";
+import SearchBar from "../HomePage/SearchBar.jsx";
+import ArticleCard from "../HomePage/ArticleCard/ArticleCard.jsx";
+import Title from "../HomePage/Title.jsx";
+import TopicsPage from "../TopicPage/TopicsPage.jsx";
+import SortControls from "../HomePage/Sort/Sort.jsx";
 import { useState } from "react";
-
-import { useArticles } from "../hooks/useGetAllArticles.js";
+import { useArticles } from "../../hooks/useGetAllArticles.js";
 import "./Home.css";
+import Loader from "../Loading/Loading.jsx";
 
 function Home() {
 	const { articles, loading } = useArticles();
@@ -19,6 +19,8 @@ function Home() {
 		const regex = new RegExp(`\\b${searchTerm}\\b`, "i");
 		return regex.test(article.title);
 	});
+
+	if (loading) return <Loader />;
 
 	return (
 		<>

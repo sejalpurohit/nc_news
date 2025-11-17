@@ -1,13 +1,12 @@
 import TopicCard from "../TopicCard/TopicCard";
 import { useTopics } from "../../hooks/useGetAllTopics";
+import Loader from "../Loading/Loading";
 import "./TopicPage.css";
 
 export default function TopicsPage() {
 	const { topics, loadingTopics } = useTopics();
 
-	if (loadingTopics) {
-		return <p>Loading content...</p>;
-	}
+	if (loadingTopics) return <Loader />;
 
 	return (
 		<section className="topics-section">

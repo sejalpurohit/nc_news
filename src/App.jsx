@@ -1,9 +1,10 @@
-import Header from "./Components/Header.jsx";
-import Home from "./Components/Home.jsx";
+import Header from "./Components/Header/Header.jsx";
+import Home from "./Components/Home/Home.jsx";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer.jsx";
 import ArticlePage from "./Components/HomePage/ArticlePage/ArticlePage.jsx";
-import TopicsPage from "./Components/TpoicPage/TopicsPage.jsx";
+import TopicsPage from "./Components/TopicPage/TopicsPage.jsx";
+import User from "./Components/User/User.jsx";
 
 function App() {
 	return (
@@ -23,6 +24,10 @@ function App() {
 					<Route
 						path="/topics"
 						element={<TopicsPage />}
+					/>
+					<Route
+						path="/users"
+						element={<User />}
 					/>
 				</Routes>
 			</div>

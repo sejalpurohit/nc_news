@@ -1,0 +1,23 @@
+.user-card {
+	background: white;
+	border-radius: 20px;
+	margin: 50px;
+	width: 80%;
+}
+
+.user-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.user-img {
+	margin: 200px;
+	max-height: 200px;
+	object-fit: cover;
+	background-color: black;
+}
+
+.user-card h3 {
+	padding: 20px;
+	text-align: center;
+}
